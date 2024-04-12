@@ -1,0 +1,93 @@
+body {
+    background: rgb(63, 94, 251);
+    background: linear-gradient(
+        90deg,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(179, 33, 63, 1) 100%
+    );
+}
+
+.main-div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 3%;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.login-heading {
+    padding: 1.5% 0;
+}
+
+hr {
+    border: 1.5px solid #cccccc;
+}
+
+.form-content {
+    padding: 5% 7%;
+}
+
+form h1 {
+    text-align: center;
+}
+
+.textfield {
+    border: none;
+    border-bottom: 2.5px solid;
+    margin: 3% 0;
+    border-color: #cccccc;
+    width: 100%;
+}
+
+.forgot-pwd-btn {
+    background: none;
+    border: none;
+    color: #757575;
+    margin: 3% 0;
+    cursor: pointer;
+}
+
+.forgot-pwd-btn:hover {
+    color: #cccccc;
+}
+
+.submit-btn {
+    margin: 3% 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid;
+    border-radius: 100px;
+    color: #000;
+    cursor: pointer;
+    min-height: 40px;
+    padding: 0 2%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+.nam-text {
+    text-align: center;
+}
+
+.signup-btn {
+    border: none;
+    background: none;
+    color: #0a66c2;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    color: #89b7e4;
+}
