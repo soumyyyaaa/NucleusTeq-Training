@@ -18,6 +18,7 @@
                         type="email"
                         placeholder="Username"
                         class="textfield"
+                        required
                     />
                     <br />
                     <br />
@@ -25,7 +26,22 @@
                         type="password"
                         placeholder="Password"
                         class="textfield"
+                        id="password"
+                        required
+                        onfocusin="pwd_rules_focusin()"
+                        onfocusout="pwd_rules_focusout()"
+                        onkeyup="lower_case(), upper_case(), number(), length_pwd(), special_char()"
                     />
+                    <div id="pwd-rules">
+                        <h4>Password must contain the following:</h4>
+                        <ul>
+                            <li id="letter">A <b>lowercase</b> letter</li>
+                            <li id="capital">An <b>uppercase</b> letter</li>
+                            <li id="number">A <b>number</b></li>
+                            <li id="special">A <b>special</b> character</li>
+                            <li id="length">Minimum <b>8</b> characters</li>
+                        </ul>
+                    </div>
                     <br />
                     <button class="forgot-pwd-btn">Forgot Password?</button>
                     <br />
@@ -37,5 +53,6 @@
                 </div>
             </form>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -45,6 +45,20 @@ form h1 {
     width: 100%;
 }
 
+.textfield::placeholder {
+    color: #757575;
+}
+
+.textfield:hover {
+    border: none;
+    border-bottom: 2.5px solid #000;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
 .forgot-pwd-btn {
     background: none;
     border: none;
@@ -73,8 +87,7 @@ form h1 {
 }
 
 .submit-btn:hover {
-    background-color: #000;
-    color: #f0f0f0;
+    background-color: #a8a8a8;
 }
 
 .nam-text {
@@ -90,4 +103,19 @@ form h1 {
 
 .signup-btn:hover {
     color: #89b7e4;
+}
+
+#pwd-rules {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    background-color: #fff;
+    color: #757575;
+    padding: 1.5%;
+    border-radius: 5px;
+}
+
+.valid {
+    color: green;
 }
