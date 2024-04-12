@@ -56,3 +56,7 @@ function special_char() {
         special.classList.remove("valid");
     }
 }
+
+function login() {
+    alert("You have logged in successfully!!");
+}
