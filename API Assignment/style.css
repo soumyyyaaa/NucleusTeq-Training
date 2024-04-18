@@ -1,10 +1,14 @@
 body {
     padding: 3% 4%;
+    /* background-color: #ded0b6; */
+    background-color: #fefae0;
 }
 
 .posts {
     font-family: "Montserrat", sans-serif;
-    color: #001233;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 4%;
 }
 
 #card {
@@ -30,7 +34,8 @@ body {
 .card1 {
     display: block;
     position: relative;
-    background-color: #cac0b3;
+    /* background-color: #cac0b3; */
+    background-color: #f2f1eb;
     border-radius: 4px;
     padding: 5%;
     text-decoration: none;
@@ -48,7 +53,8 @@ body {
     z-index: -1;
     top: -16px;
     right: -16px;
-    background: #ff595a;
+    /* background: #ff595a; */
+    background: #afc8ad;
     height: 32px;
     width: 32px;
     border-radius: 32px;
