@@ -75,3 +75,19 @@ body {
     text-align: justify;
     font-size: 15px;
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 7%;
+    }
+
+    #grid {
+        grid-template-columns: auto;
+        grid-row-gap: 2%;
+        margin-top: 5%;
+    }
+
+    .carousel-inner {
+        background-color: #afc8ad;
+    }
+}
