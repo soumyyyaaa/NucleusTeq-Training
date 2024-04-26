@@ -10,13 +10,56 @@
             rel="stylesheet"
         />
     </head>
-    <body>
-        <div class="home-page">
+    <body style="background-color: black">
+        <div id="home-page">
             <div class="center">
                 <img src="Mario-Logo.gif" class="quiz-logo" />
-                <button class="start-btn">START</button>
+                <button onclick="startButtonCLick()" class="start-btn">
+                    START
+                </button>
             </div>
         </div>
+        <div id="difficulty-level-page">
+            <div class="center">
+                <h1>DIFFICULTY LEVEL</h1>
+                <div class="difficulty-container">
+                    <button
+                        class="difficulty-btn"
+                        value="low"
+                        onclick="difficultyLevelClick()"
+                    >
+                        <img
+                            src="low.png"
+                            alt="low level"
+                            class="difficulty-levels"
+                        />
+                    </button>
+                    <button
+                        class="difficulty-btn"
+                        value="medium"
+                        onclick="difficultyLevelClick()"
+                    >
+                        <img
+                            src="medium.png"
+                            alt="medium level"
+                            class="difficulty-levels"
+                        />
+                    </button>
+                    <button
+                        class="difficulty-btn"
+                        value="high"
+                        onclick="difficultyLevelClick()"
+                    >
+                        <img
+                            src="high.png"
+                            alt="hard level"
+                            class="difficulty-levels"
+                        />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="category-page"></div>
         <script src="script.js"></script>
     </body>
 </html>

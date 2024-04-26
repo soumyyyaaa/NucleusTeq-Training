@@ -1,9 +1,6 @@
-body {
-    background-color: #000;
-}
-
-.home-page {
+#home-page {
     margin-top: 25vh;
+    display: block;
 }
 
 .quiz-logo {
@@ -25,8 +22,56 @@ body {
     margin: 0 auto;
 }
 
+#difficulty-level-page {
+    display: none;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+}
+
+#difficulty-level-page h1 {
+    font-size: 2.5rem;
+}
+
+.difficulty-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.difficulty-btn {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    height: 200px;
+    width: 200px;
+    border: #000 solid 5px;
+}
+
+.difficulty-btn:hover {
+    border: #0077b5 solid 5px;
+}
+
+.difficulty-levels {
+    width: 90%;
+}
+
+/*-------------------------------TABLET----------------------------------*/
+@media only screen and (min-width: 600px) {
+    .difficulty-container {
+        grid-template-columns: 45% 45%;
+        grid-gap: 5%;
+    }
+}
+
+/*--------------------------------DESKTOP---------------------------------*/
 @media only screen and (min-width: 768px) {
-    .home-page {
+    #home-page {
         position: relative;
         height: 90vh;
         text-align: center;
@@ -49,5 +94,32 @@ body {
 
     .start-btn:hover {
         border: #0077b5 solid 5px;
+    }
+
+    #difficulty-level-page {
+        font-family: "Jersey 15", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    #difficulty-level-page h1 {
+        font-size: 4rem;
+        margin-bottom: 5%;
+        margin-top: 0;
+    }
+
+    .difficulty-container {
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 5%;
+    }
+
+    .difficulty-btn {
+        cursor: pointer;
+        height: auto;
+        width: auto;
+    }
+
+    .difficulty-levels {
+        width: 100%;
     }
 }
