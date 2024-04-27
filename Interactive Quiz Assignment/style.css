@@ -1,6 +1,18 @@
+body {
+    background-image: linear-gradient(
+        to top,
+        #020202,
+        #090909,
+        #0f0f0f,
+        #141414,
+        #181818
+    );
+}
+
 #home-page {
     margin-top: 25vh;
     display: block;
+    height: 68vh;
 }
 
 .quiz-logo {
@@ -19,26 +31,29 @@
     font-weight: 700;
     font-style: normal;
     display: block;
+    letter-spacing: 3px;
     margin: 0 auto;
 }
 
 #difficulty-level-page {
     display: none;
-    font-family: "Jersey 15", sans-serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-style: normal;
     color: #fff;
     text-align: center;
+    padding: 4%;
+    height: 100vh;
 }
 
 #difficulty-level-page h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .difficulty-container {
     display: grid;
     grid-template-columns: auto;
-    grid-gap: 2%;
+    grid-gap: 4%;
     align-items: center;
     justify-content: center;
 }
@@ -48,9 +63,6 @@
     padding: 0;
     background: none;
     border: none;
-    height: 200px;
-    width: 200px;
-    border: #000 solid 5px;
 }
 
 .difficulty-btn:hover {
@@ -58,32 +70,57 @@
 }
 
 .difficulty-levels {
-    width: 90%;
+    width: 60%;
+}
+
+#category-page {
+    display: none;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    margin-top: 30vh;
+    height: 61vh;
+}
+
+#category-page h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+
+.category-submit-btn {
+    padding: 2% 6%;
+    font-size: 1.2rem;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    margin: 10% auto;
+}
+
+.category-desktop {
+    display: none;
 }
 
 /*-------------------------------TABLET----------------------------------*/
-@media only screen and (min-width: 600px) {
-    .difficulty-container {
-        grid-template-columns: 45% 45%;
-        grid-gap: 5%;
-    }
-}
-
-/*--------------------------------DESKTOP---------------------------------*/
-@media only screen and (min-width: 768px) {
-    #home-page {
-        position: relative;
-        height: 90vh;
-        text-align: center;
-        margin-top: 0;
-    }
-
+@media only screen and (min-width: 481px) {
     .center {
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    #home-page {
+        position: relative;
+        height: 98vh;
+        text-align: center;
+        margin-top: 0;
     }
 
     .start-btn {
@@ -97,29 +134,142 @@
     }
 
     #difficulty-level-page {
-        font-family: "Jersey 15", sans-serif;
+        font-family: "Roboto Slab", serif;
         font-weight: 700;
         font-style: normal;
+        letter-spacing: 3px;
+        padding: 0;
+        height: 98vh;
     }
 
     #difficulty-level-page h1 {
-        font-size: 4rem;
-        margin-bottom: 5%;
+        font-size: 2.5rem;
+        margin-bottom: 10%;
         margin-top: 0;
     }
 
     .difficulty-container {
-        grid-template-columns: 30% 30% 30%;
-        grid-gap: 5%;
+        text-align: center;
+        grid-template-columns: auto auto auto;
+        grid-gap: 7%;
+        justify-content: center;
     }
 
     .difficulty-btn {
         cursor: pointer;
-        height: auto;
-        width: auto;
+    }
+
+    .difficulty-btn:hover {
+        border: #0077b5 solid 2px;
     }
 
     .difficulty-levels {
         width: 100%;
+    }
+
+    #category-page {
+        margin-top: 0;
+        font-family: "Roboto Slab", serif;
+        font-weight: 700;
+        font-style: normal;
+        padding: 5% 5% 5% 5%;
+        height: 150vh;
+    }
+
+    #category-page h1 {
+        font-size: 2.5rem;
+        margin-bottom: 7%;
+        margin-top: 0;
+    }
+
+    .category-phone {
+        display: none;
+    }
+
+    .category-desktop {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 7%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .category-btn {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .category-btn:hover {
+        border: #0077b5 solid 2px;
+    }
+
+    .category-btn p {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .category-img {
+        width: 100%;
+    }
+}
+
+/*--------------------------------DESKTOP---------------------------------*/
+@media only screen and (min-width: 1024px) {
+    #home-page {
+        height: 97.5vh;
+    }
+
+    .start-btn:hover {
+        border: #fff solid 5px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    #difficulty-level-page {
+        height: 97vh;
+    }
+
+    #difficulty-level-page h1 {
+        font-size: 3rem;
+        margin-bottom: 10%;
+    }
+
+    .difficulty-btn {
+        transition: transform 0.2s;
+    }
+
+    .difficulty-btn:hover {
+        border: none;
+        transform: scale(1.5);
+    }
+
+    #category-page {
+        padding: 4% 7%;
+        height: 108vh;
+    }
+
+    #category-page h1 {
+        font-size: 3rem;
+        margin-bottom: 5%;
+    }
+
+    .category-desktop {
+        grid-template-columns: auto auto auto auto auto;
+        grid-gap: 7%;
+    }
+
+    .category-btn {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .category-btn:hover {
+        transform: scale(1.2);
+        border: none;
+    }
+
+    .category-img {
+        width: 70%;
     }
 }

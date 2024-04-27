@@ -5,15 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Quiz</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="Images/favicon.ico" />
         <link
             href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
     </head>
-    <body style="background-color: black">
+    <body>
         <div id="home-page">
             <div class="center">
-                <img src="Mario-Logo.gif" class="quiz-logo" />
+                <img src="Images/Mario-Logo.gif" class="quiz-logo" />
                 <button onclick="startButtonCLick()" class="start-btn">
                     START
                 </button>
@@ -29,7 +34,7 @@
                         onclick="difficultyLevelClick()"
                     >
                         <img
-                            src="low.png"
+                            src="Images/low.png"
                             alt="low level"
                             class="difficulty-levels"
                         />
@@ -40,7 +45,7 @@
                         onclick="difficultyLevelClick()"
                     >
                         <img
-                            src="medium.png"
+                            src="Images/medium.png"
                             alt="medium level"
                             class="difficulty-levels"
                         />
@@ -51,7 +56,7 @@
                         onclick="difficultyLevelClick()"
                     >
                         <img
-                            src="high.png"
+                            src="Images/high.png"
                             alt="hard level"
                             class="difficulty-levels"
                         />
@@ -59,7 +64,98 @@
                 </div>
             </div>
         </div>
-        <div id="category-page"></div>
+        <div id="category-page">
+            <h1>CATEGORY</h1>
+            <div class="category-phone">
+                <form>
+                    <select
+                        id="category"
+                        style="width: 60%; padding: 2%; font-size: 1rem"
+                        name="category"
+                    >
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Books</option>
+                        <option value="11">Film</option>
+                        <option value="12">Music</option>
+                        <option value="17">Nature</option>
+                        <option value="18">Computers</option>
+                        <option value="19">Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="24">Politics</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="31">Anime</option>
+                        <option value="32">Cartoon</option>
+                    </select>
+                    <br />
+                    <input type="submit" class="category-submit-btn" />
+                </form>
+            </div>
+            <div class="category-desktop">
+                <button class="category-btn" value="9">
+                    <img src="Images/gk.png" class="category-img" />
+                    <p>General Knowledge</p>
+                </button>
+                <button class="category-btn" value="10">
+                    <img src="Images/book.png" class="category-img" />
+                    <p>Books</p>
+                </button>
+                <button class="category-btn" value="11">
+                    <img src="Images/film.png" class="category-img" />
+                    <p>Film</p>
+                </button>
+                <button class="category-btn" value="12">
+                    <img src="Images/music.png" class="category-img" />
+                    <p>Music</p>
+                </button>
+                <button class="category-btn" value="17">
+                    <img src="Images/nature.png" class="category-img" />
+                    <p>Nature</p>
+                </button>
+                <button class="category-btn" value="18">
+                    <img src="Images/computer.png" class="category-img" />
+                    <p>Computers</p>
+                </button>
+                <button class="category-btn" value="19">
+                    <img src="Images/mathematics.png" class="category-img" />
+                    <p>Mathematics</p>
+                </button>
+                <button class="category-btn" value="20">
+                    <img src="Images/mythology.png" class="category-img" />
+                    <p>Mythology</p>
+                </button>
+                <button class="category-btn" value="21">
+                    <img src="Images/sports.png" class="category-img" />
+                    <p>Sports</p>
+                </button>
+                <button class="category-btn" value="24">
+                    <img src="Images/politics.png" class="category-img" />
+                    <p>Politics</p>
+                </button>
+                <button class="category-btn" value="26">
+                    <img src="Images/celebrity.png" class="category-img" />
+                    <p>Celebrities</p>
+                </button>
+                <button class="category-btn" value="27">
+                    <img src="Images/animals.png" class="category-img" />
+                    <p>Animals</p>
+                </button>
+                <button class="category-btn" value="28">
+                    <img src="Images/vehicles.png" class="category-img" />
+                    <p>Vehicles</p>
+                </button>
+                <button class="category-btn" value="31">
+                    <img src="Images/anime.png" class="category-img" />
+                    <p>Anime</p>
+                </button>
+                <button class="category-btn" value="32">
+                    <img src="Images/cartoon.png" class="category-img" />
+                    <p>Cartoon</p>
+                </button>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
