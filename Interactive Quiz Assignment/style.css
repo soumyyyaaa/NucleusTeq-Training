@@ -4,14 +4,16 @@ body {
 }
 
 #home-page {
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         to top,
         #020202,
         #090909,
         #0f0f0f,
         #141414,
         #181818
-    );
+    ); */
+    background-color: #000;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
     display: block;
     height: 100vh;
 }
@@ -45,76 +47,97 @@ body {
 
 #difficulty-level-page {
     display: none;
-    background: radial-gradient(
-        circle at 3.1% 8.2%,
-        rgb(248, 250, 107) 0%,
-        rgb(238, 148, 148) 98.2%
+    /* background: linear-gradient(45deg, #eedbde, #e3dbec 70%);
+     */
+
+    /* background: linear-gradient(
+        90deg,
+        hsla(31, 90%, 76%, 1) 0%,
+        hsla(302, 82%, 76%, 1) 100%
     );
+ */
+    background-color: #eadfb4;
+    --easy-color: #01d06f;
+    --medium-color: #eca644;
+    --hard-color: #ec4b0b;
     font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-style: normal;
     color: #000;
-    text-align: center;
     height: 100vh;
+    margin: auto;
 }
 
 #difficulty-level-page h1 {
+    margin: 0 0 2%;
     font-size: 2.5rem;
-}
-
-.difficulty-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 4%;
-    align-items: center;
-    justify-content: center;
+    text-shadow: 1px 1px 1px #00000044;
+    text-align: center;
 }
 
 .difficulty-btn {
-    margin: 0;
-    padding: 0;
-    background: none;
     cursor: pointer;
-    border: none;
+    padding: 1em;
+    background: #f0f0f0aa;
+    border-width: 3px 0;
+    border-style: solid;
+    margin: 1.5em auto;
 }
 
-.difficulty-levels {
-    width: 65%;
+.easy {
+    border-image: linear-gradient(90deg, var(--easy-color), #dadada00) 30;
+}
+
+.easy:hover {
+    background: linear-gradient(90deg, var(--easy-color), #dadada00);
+}
+
+.medium {
+    border-image: linear-gradient(90deg, var(--medium-color), #dadada00) 30;
+}
+
+.medium:hover {
+    background: linear-gradient(90deg, var(--medium-color), #dadada00);
+}
+
+.hard {
+    border-image: linear-gradient(90deg, var(--hard-color), #dadada00) 30;
+}
+
+.hard:hover {
+    background: linear-gradient(90deg, var(--hard-color), #dadada00);
+}
+
+.bullet {
+    filter: brightness(1.15);
+}
+
+.easy .bullet {
+    color: var(--easy-color);
+}
+
+.medium .bullet {
+    color: var(--medium-color);
+}
+
+.hard .bullet {
+    color: var(--hard-color);
 }
 
 #category-page {
-    background: hsla(0, 100%, 67%, 1);
-
-    background: linear-gradient(
-        90deg,
-        hsla(0, 100%, 67%, 1) 0%,
-        hsla(0, 100%, 89%, 1) 100%
-    );
-
-    background: -moz-linear-gradient(
-        90deg,
-        hsla(0, 100%, 67%, 1) 0%,
-        hsla(0, 100%, 89%, 1) 100%
-    );
-
-    background: -webkit-linear-gradient(
-        90deg,
-        hsla(0, 100%, 67%, 1) 0%,
-        hsla(0, 100%, 89%, 1) 100%
-    );
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF5858", endColorstr="#FFC8C8", GradientType=1 );
     display: none;
     font-weight: 700;
     font-family: "Roboto Slab", serif;
     font-style: normal;
     color: #000;
     text-align: center;
+    background-color: #eee3cb;
     height: 100vh;
 }
 
 #category-page h1 {
     font-size: 2.5rem;
+    text-shadow: 1px 1px 1px #00000044;
     margin-top: 0;
     margin-bottom: 10%;
 }
@@ -154,28 +177,9 @@ body {
         font-size: 2.5rem;
     }
 
-    .difficulty-container {
-        text-align: center;
-        grid-template-columns: auto auto auto;
-        grid-gap: 7%;
-        justify-content: center;
-    }
-
-    .difficulty-btn {
-        transition: transform 0.2s;
-    }
-
-    .difficulty-btn:hover {
-        border: none;
-        transform: scale(1.5);
-    }
-
-    .difficulty-levels {
-        width: 100%;
-    }
-
     #category-page {
         margin-top: 0;
+        height: fit-content;
     }
 
     #category-page h1 {
@@ -194,31 +198,149 @@ body {
         text-align: center;
         justify-content: center;
         grid-gap: 10%;
+        padding-bottom: 45%;
     }
 
-    .category-btn {
-        border: none;
-        background: none;
-        padding: 0;
-        transition: transform 0.2s;
+    .category-card {
+        width: 130px;
+        height: 150px;
+        display: grid;
+        grid-template-rows: 70% 30%;
         cursor: pointer;
     }
 
-    .category-btn:hover {
-        transform: scale(1.2);
-        border: none;
+    .category-card:hover {
+        transform: scale(1.05);
     }
 
-    .category-btn p {
+    .icon {
+        padding: 20% 0;
+    }
+
+    .category-card p {
+        border-radius: 0 0 5% 5%;
+        border: 1px solid #f3f3f3;
         font-size: 1.2rem;
-        color: #fff;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 5%;
+        justify-content: center;
+    }
+
+    .category-card-icons {
+        border-radius: 5% 5% 0 0;
+        border: 1px solid;
+    }
+
+    .gk {
+        background-color: #627a92;
+        color: #4a5b6d;
+        border-color: #53bbb4;
+    }
+
+    .books {
+        background-color: #53bbb4;
+        color: #43958f;
+        border-color: #53bbb4;
+    }
+
+    .film {
+        background-color: #f5a572;
+        color: #bd7658;
+        border-color: #f5a572;
+    }
+
+    .music {
+        background-color: #f39893;
+        color: #bf7874;
+        border-color: #f39893;
+    }
+
+    .nature {
+        background-color: #abd194;
+        color: #8eac7a;
+        border-color: #abd194;
+    }
+
+    .computers {
+        background-color: #b88cbf;
+        color: #91699e;
+        border-color: #b88cbf;
+    }
+
+    .maths {
+        background-color: #f1c85e;
+        color: #c9a74d;
+        border-color: #f1c85e;
+    }
+
+    .mythology {
+        background-color: #84a1c1;
+        color: #667e96;
+        border-color: #84a1c1;
+    }
+
+    .sports {
+        background-color: #21898c;
+        color: #17666a;
+        border-color: #21898c;
+    }
+
+    .politics {
+        background-color: #3079ac;
+        color: #235a80;
+        border-color: #3079ac;
+    }
+
+    .celebrities {
+        background-color: #7c87a5;
+        color: #575f73;
+        border-color: #7c87a5;
+    }
+
+    .animals {
+        background-color: #b99191;
+        color: #976a6a;
+        border-color: #b99191;
+    }
+
+    .vehicles {
+        background-color: #7ac2da;
+        color: #6099ac;
+        border-color: #7ac2da;
+    }
+
+    .anime {
+        background-color: #a2a2a6;
+        color: #7e7e81;
+        border-color: #a2a2a6;
+    }
+
+    .cartoon {
+        background-color: #d3c9a2;
+        color: #a49c7e;
+        border-color: #d3c9a2;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    #category-page {
+        height: fit-content;
     }
 }
 
 /*--------------------------------DESKTOP---------------------------------*/
 @media only screen and (min-width: 1024px) {
     #difficulty-level-page h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
+    }
+
+    .difficulty-btn {
+        font-size: 1.5rem;
+    }
+
+    #category-page {
+        height: 100vh;
     }
 
     #category-page h1 {
@@ -227,5 +349,11 @@ body {
 
     .category-desktop {
         grid-template-columns: auto auto auto auto auto;
+        grid-row-gap: 15%;
+        padding: 0 10% 15% 10%;
+    }
+
+    .category-card {
+        width: 150px;
     }
 }

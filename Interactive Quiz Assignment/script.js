@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const category_buttons = document.querySelectorAll(".category-btn");
+    const category_buttons = document.querySelectorAll(".category-card");
     category_buttons.forEach((button) => {
         button.addEventListener("mousedown", function () {
             selected_category = this.getAttribute("value");
