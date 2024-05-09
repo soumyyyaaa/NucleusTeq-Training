@@ -12,7 +12,7 @@ body {
         #141414,
         #181818
     ); */
-    background-color: #000;
+    background-color: #e3e1d9;
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
     display: block;
     height: 100vh;
@@ -37,11 +37,10 @@ body {
     border-radius: 5%;
     border: none;
     cursor: pointer;
-    font-family: "Jersey 15", sans-serif;
     font-weight: 700;
     font-style: normal;
     display: block;
-    letter-spacing: 3px;
+    font-family: "Roboto Slab", serif;
     margin: 0 auto;
 }
 
@@ -164,13 +163,12 @@ body {
     .start-btn {
         padding: 2% 8%;
         font-size: 2.5rem;
-        border: #000 solid 5px;
+        border: #1a1a1a solid 5px;
     }
 
     .start-btn:hover {
-        border: #fff solid 5px;
-        background-color: #000;
         color: #fff;
+        background-color: #1a1a1a;
     }
 
     #difficulty-level-page h1 {
@@ -207,10 +205,13 @@ body {
         display: grid;
         grid-template-rows: 70% 30%;
         cursor: pointer;
+        border: 2px solid transparent;
     }
 
     .category-card:hover {
         transform: scale(1.05);
+        border: 2px solid black;
+        border-radius: 5%;
     }
 
     .icon {
@@ -323,12 +324,6 @@ body {
     }
 }
 
-@media only screen and (min-width: 1366px) {
-    #category-page {
-        height: fit-content;
-    }
-}
-
 /*--------------------------------DESKTOP---------------------------------*/
 @media only screen and (min-width: 1024px) {
     #difficulty-level-page h1 {
@@ -340,7 +335,7 @@ body {
     }
 
     #category-page {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     #category-page h1 {
