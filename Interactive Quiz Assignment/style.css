@@ -6,7 +6,7 @@ body {
 #home-page {
     background-color: #e3e1d9;
     display: block;
-    height: 92.5vh;
+    height: 100vh;
 }
 
 .center {
@@ -47,7 +47,7 @@ body {
     font-style: normal;
     color: #000;
     margin: auto;
-    height: 92.5vh;
+    height: 100vh;
 }
 
 #difficulty-level-page h1 {
@@ -114,7 +114,8 @@ body {
     color: #000;
     text-align: center;
     background-color: #eee3cb;
-    height: 92.5vh;
+    min-height: 100vh;
+    padding: 5% 0%;
 }
 
 #category-page h1 {
@@ -124,22 +125,131 @@ body {
     margin-bottom: 10%;
 }
 
-.category-submit-btn {
-    padding: 2% 6%;
-    font-size: 1.2rem;
-    border-radius: 5%;
-    border: none;
-    cursor: pointer;
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    font-style: normal;
-    display: block;
-    margin: 10% auto;
-    border: #1a1a1a solid 3px;
+.category-desktop {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 2% 10%;
+    padding-bottom: 55%;
 }
 
-.category-desktop {
-    display: none;
+.category-card {
+    width: 100px;
+    height: 120px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.icon {
+    padding: 20% 0;
+}
+
+.category-card p {
+    border-radius: 0 0 5% 5%;
+    border: 1px solid #f3f3f3;
+    font-size: 1rem;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 5%;
+    justify-content: center;
+}
+
+.category-card-icons {
+    border-radius: 5% 5% 0 0;
+    border: 1px solid;
+}
+
+.gk {
+    background-color: #627a92;
+    color: #4a5b6d;
+    border-color: #627a92;
+}
+
+.books {
+    background-color: #53bbb4;
+    color: #43958f;
+    border-color: #53bbb4;
+}
+
+.film {
+    background-color: #f5a572;
+    color: #bd7658;
+    border-color: #f5a572;
+}
+
+.music {
+    background-color: #f39893;
+    color: #bf7874;
+    border-color: #f39893;
+}
+
+.nature {
+    background-color: #abd194;
+    color: #8eac7a;
+    border-color: #abd194;
+}
+
+.computers {
+    background-color: #b88cbf;
+    color: #91699e;
+    border-color: #b88cbf;
+}
+
+.maths {
+    background-color: #f1c85e;
+    color: #c9a74d;
+    border-color: #f1c85e;
+}
+
+.mythology {
+    background-color: #84a1c1;
+    color: #667e96;
+    border-color: #84a1c1;
+}
+
+.sports {
+    background-color: #21898c;
+    color: #17666a;
+    border-color: #21898c;
+}
+
+.politics {
+    background-color: #3079ac;
+    color: #235a80;
+    border-color: #3079ac;
+}
+
+.celebrities {
+    background-color: #7c87a5;
+    color: #575f73;
+    border-color: #7c87a5;
+}
+
+.animals {
+    background-color: #b99191;
+    color: #976a6a;
+    border-color: #b99191;
+}
+
+.vehicles {
+    background-color: #7ac2da;
+    color: #6099ac;
+    border-color: #7ac2da;
+}
+
+.anime {
+    background-color: #a2a2a6;
+    color: #7e7e81;
+    border-color: #a2a2a6;
+}
+
+.cartoon {
+    background-color: #d3c9a2;
+    color: #a49c7e;
+    border-color: #d3c9a2;
 }
 
 /*-------------------------------TABLET----------------------------------*/
@@ -178,26 +288,9 @@ body {
         margin-bottom: 0;
     }
 
-    .category-phone {
-        display: none;
-    }
-
-    .category-desktop {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        text-align: center;
-        justify-content: center;
-        grid-gap: 10%;
-        padding-bottom: 45%;
-    }
-
     .category-card {
         width: 130px;
         height: 150px;
-        display: grid;
-        grid-template-rows: 70% 30%;
-        cursor: pointer;
-        border: 2px solid transparent;
     }
 
     .category-card:hover {
@@ -206,113 +299,14 @@ body {
         border-radius: 5%;
     }
 
-    .icon {
-        padding: 20% 0;
+    .category-desktop {
+        grid-template-columns: auto auto auto;
+        grid-gap: 7% 10%;
+        padding-bottom: 35%;
     }
 
     .category-card p {
-        border-radius: 0 0 5% 5%;
-        border: 1px solid #f3f3f3;
         font-size: 1.2rem;
-        background-color: #f3f3f3;
-        margin: 0;
-        padding: 5%;
-        justify-content: center;
-    }
-
-    .category-card-icons {
-        border-radius: 5% 5% 0 0;
-        border: 1px solid;
-    }
-
-    .gk {
-        background-color: #627a92;
-        color: #4a5b6d;
-        border-color: #53bbb4;
-    }
-
-    .books {
-        background-color: #53bbb4;
-        color: #43958f;
-        border-color: #53bbb4;
-    }
-
-    .film {
-        background-color: #f5a572;
-        color: #bd7658;
-        border-color: #f5a572;
-    }
-
-    .music {
-        background-color: #f39893;
-        color: #bf7874;
-        border-color: #f39893;
-    }
-
-    .nature {
-        background-color: #abd194;
-        color: #8eac7a;
-        border-color: #abd194;
-    }
-
-    .computers {
-        background-color: #b88cbf;
-        color: #91699e;
-        border-color: #b88cbf;
-    }
-
-    .maths {
-        background-color: #f1c85e;
-        color: #c9a74d;
-        border-color: #f1c85e;
-    }
-
-    .mythology {
-        background-color: #84a1c1;
-        color: #667e96;
-        border-color: #84a1c1;
-    }
-
-    .sports {
-        background-color: #21898c;
-        color: #17666a;
-        border-color: #21898c;
-    }
-
-    .politics {
-        background-color: #3079ac;
-        color: #235a80;
-        border-color: #3079ac;
-    }
-
-    .celebrities {
-        background-color: #7c87a5;
-        color: #575f73;
-        border-color: #7c87a5;
-    }
-
-    .animals {
-        background-color: #b99191;
-        color: #976a6a;
-        border-color: #b99191;
-    }
-
-    .vehicles {
-        background-color: #7ac2da;
-        color: #6099ac;
-        border-color: #7ac2da;
-    }
-
-    .anime {
-        background-color: #a2a2a6;
-        color: #7e7e81;
-        border-color: #a2a2a6;
-    }
-
-    .cartoon {
-        background-color: #d3c9a2;
-        color: #a49c7e;
-        border-color: #d3c9a2;
     }
 }
 
@@ -327,20 +321,17 @@ body {
     }
 
     #category-page {
-        min-height: 100vh;
+        min-height: fit-content;
     }
 
     #category-page h1 {
         font-size: 3rem;
+        padding: 0 0 5% 0;
     }
 
     .category-desktop {
         grid-template-columns: auto auto auto auto auto;
         grid-row-gap: 15%;
-        padding: 0 10% 15% 10%;
-    }
-
-    .category-card {
-        width: 150px;
+        padding-bottom: 14%;
     }
 }

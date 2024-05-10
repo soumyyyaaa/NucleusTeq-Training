@@ -51,134 +51,97 @@
             </div>
         </div>
         <div id="category-page">
-            <div id="category-center" class="center">
-                <h1>CATEGORY</h1>
-                <div class="category-phone">
-                    <form>
-                        <select
-                            id="category"
-                            style="width: 90%; padding: 2%; font-size: 1rem"
-                            name="category"
-                        >
-                            <option value="9">General Knowledge</option>
-                            <option value="10">Books</option>
-                            <option value="11">Film</option>
-                            <option value="12">Music</option>
-                            <option value="17">Nature</option>
-                            <option value="18">Computers</option>
-                            <option value="19">Mathematics</option>
-                            <option value="20">Mythology</option>
-                            <option value="21">Sports</option>
-                            <option value="24">Politics</option>
-                            <option value="26">Celebrities</option>
-                            <option value="27">Animals</option>
-                            <option value="28">Vehicles</option>
-                            <option value="31">Anime</option>
-                            <option value="32">Cartoon</option>
-                        </select>
-                    </form>
-                    <button
-                        class="category-submit-btn"
-                        onclick="categorySubmitClick()"
-                    >
-                        Choose
-                    </button>
+            <h1>CATEGORY</h1>
+            <div class="category-desktop">
+                <div class="category-card" value="9">
+                    <div class="category-card-icons gk">
+                        <i class="fa-solid fa-globe fa-3x icon"></i>
+                    </div>
+                    <p>GK</p>
                 </div>
-                <div class="category-desktop">
-                    <div class="category-card" value="9">
-                        <div class="category-card-icons gk">
-                            <i class="fa-solid fa-globe fa-3x icon"></i>
-                        </div>
-                        <p>GK</p>
+                <div class="category-card" value="10">
+                    <div class="category-card-icons books">
+                        <i class="fa-solid fa-book fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="10">
-                        <div class="category-card-icons books">
-                            <i class="fa-solid fa-book fa-3x icon"></i>
-                        </div>
-                        <p>Books</p>
+                    <p>Books</p>
+                </div>
+                <div class="category-card" value="11">
+                    <div class="category-card-icons film">
+                        <i class="fa-solid fa-video fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="11">
-                        <div class="category-card-icons film">
-                            <i class="fa-solid fa-video fa-3x icon"></i>
-                        </div>
-                        <p>Film</p>
+                    <p>Film</p>
+                </div>
+                <div class="category-card" value="12">
+                    <div class="category-card-icons music">
+                        <i class="fa-solid fa-music fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="12">
-                        <div class="category-card-icons music">
-                            <i class="fa-solid fa-music fa-3x icon"></i>
-                        </div>
-                        <p>Music</p>
+                    <p>Music</p>
+                </div>
+                <div class="category-card" value="17">
+                    <div class="category-card-icons nature">
+                        <i class="fa-solid fa-tree fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="17">
-                        <div class="category-card-icons nature">
-                            <i class="fa-solid fa-tree fa-3x icon"></i>
-                        </div>
-                        <p>Nature</p>
+                    <p>Nature</p>
+                </div>
+                <div class="category-card" value="18">
+                    <div class="category-card-icons computers">
+                        <i class="fa-solid fa-computer fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="18">
-                        <div class="category-card-icons computers">
-                            <i class="fa-solid fa-computer fa-3x icon"></i>
-                        </div>
-                        <p>Computers</p>
+                    <p>Computers</p>
+                </div>
+                <div class="category-card" value="19">
+                    <div class="category-card-icons maths">
+                        <i class="fa-solid fa-calculator fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="19">
-                        <div class="category-card-icons maths">
-                            <i class="fa-solid fa-calculator fa-3x icon"></i>
-                        </div>
-                        <p>Maths</p>
+                    <p>Maths</p>
+                </div>
+                <div class="category-card" value="20">
+                    <div class="category-card-icons mythology">
+                        <i class="fa-brands fa-pied-piper-alt fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="20">
-                        <div class="category-card-icons mythology">
-                            <i
-                                class="fa-brands fa-pied-piper-alt fa-3x icon"
-                            ></i>
-                        </div>
-                        <p>Mythology</p>
+                    <p>Mythology</p>
+                </div>
+                <div class="category-card" value="21">
+                    <div class="category-card-icons sports">
+                        <i class="fa-solid fa-volleyball fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="21">
-                        <div class="category-card-icons sports">
-                            <i class="fa-solid fa-volleyball fa-3x icon"></i>
-                        </div>
-                        <p>Sports</p>
+                    <p>Sports</p>
+                </div>
+                <div class="category-card" value="24">
+                    <div class="category-card-icons politics">
+                        <i class="fa-solid fa-landmark-dome fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="24">
-                        <div class="category-card-icons politics">
-                            <i class="fa-solid fa-landmark-dome fa-3x icon"></i>
-                        </div>
-                        <p>Politics</p>
+                    <p>Politics</p>
+                </div>
+                <div class="category-card" value="26">
+                    <div class="category-card-icons celebrities">
+                        <i class="fa-solid fa-crown fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="26">
-                        <div class="category-card-icons celebrities">
-                            <i class="fa-solid fa-crown fa-3x icon"></i>
-                        </div>
-                        <p>Celebrities</p>
+                    <p>Celebrities</p>
+                </div>
+                <div class="category-card" value="27">
+                    <div class="category-card-icons animals">
+                        <i class="fa-solid fa-hippo fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="27">
-                        <div class="category-card-icons animals">
-                            <i class="fa-solid fa-hippo fa-3x icon"></i>
-                        </div>
-                        <p>Animals</p>
+                    <p>Animals</p>
+                </div>
+                <div class="category-card" value="28">
+                    <div class="category-card-icons vehicles">
+                        <i class="fa-solid fa-motorcycle fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="28">
-                        <div class="category-card-icons vehicles">
-                            <i class="fa-solid fa-motorcycle fa-3x icon"></i>
-                        </div>
-                        <p>Vehicles</p>
+                    <p>Vehicles</p>
+                </div>
+                <div class="category-card" value="31">
+                    <div class="category-card-icons anime">
+                        <i class="fa-solid fa-mountain-sun fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="31">
-                        <div class="category-card-icons anime">
-                            <i class="fa-solid fa-mountain-sun fa-3x icon"></i>
-                        </div>
-                        <p>Anime</p>
+                    <p>Anime</p>
+                </div>
+                <div class="category-card" value="32">
+                    <div class="category-card-icons cartoon">
+                        <i class="fa-brands fa-octopus-deploy fa-3x icon"></i>
                     </div>
-                    <div class="category-card" value="32">
-                        <div class="category-card-icons cartoon">
-                            <i
-                                class="fa-brands fa-octopus-deploy fa-3x icon"
-                            ></i>
-                        </div>
-                        <p>Cartoon</p>
-                    </div>
+                    <p>Cartoon</p>
                 </div>
             </div>
         </div>
