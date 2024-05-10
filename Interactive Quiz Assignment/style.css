@@ -113,7 +113,7 @@ body {
     font-style: normal;
     color: #000;
     text-align: center;
-    background-color: #eee3cb;
+    background-color: #e1f0da;
     min-height: 100vh;
     padding: 5% 0%;
 }
@@ -252,6 +252,13 @@ body {
     border-color: #d3c9a2;
 }
 
+#questions {
+    display: none;
+    background-color: #000;
+    height: 100vh;
+    color: wheat;
+}
+
 /*-------------------------------TABLET----------------------------------*/
 @media only screen and (min-width: 481px) {
     #home-page {
@@ -294,7 +301,7 @@ body {
     }
 
     .category-card:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
         border: 2px solid black;
         border-radius: 5%;
     }
