@@ -4,18 +4,9 @@ body {
 }
 
 #home-page {
-    /* background-image: linear-gradient(
-        to top,
-        #020202,
-        #090909,
-        #0f0f0f,
-        #141414,
-        #181818
-    ); */
     background-color: #e3e1d9;
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
     display: block;
-    height: 100vh;
+    height: 92.5vh;
 }
 
 .center {
@@ -33,28 +24,20 @@ body {
 
 .start-btn {
     padding: 3% 10%;
-    font-size: 2rem;
-    border-radius: 5%;
+    font-size: 1rem;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: 700;
     font-style: normal;
+    border: #1a1a1a solid 3px;
     display: block;
     font-family: "Roboto Slab", serif;
-    margin: 0 auto;
+    margin: 10% auto;
 }
 
 #difficulty-level-page {
     display: none;
-    /* background: linear-gradient(45deg, #eedbde, #e3dbec 70%);
-     */
-
-    /* background: linear-gradient(
-        90deg,
-        hsla(31, 90%, 76%, 1) 0%,
-        hsla(302, 82%, 76%, 1) 100%
-    );
- */
     background-color: #eadfb4;
     --easy-color: #01d06f;
     --medium-color: #eca644;
@@ -63,8 +46,8 @@ body {
     font-weight: 700;
     font-style: normal;
     color: #000;
-    height: 100vh;
     margin: auto;
+    height: 92.5vh;
 }
 
 #difficulty-level-page h1 {
@@ -131,7 +114,7 @@ body {
     color: #000;
     text-align: center;
     background-color: #eee3cb;
-    height: 100vh;
+    height: 92.5vh;
 }
 
 #category-page h1 {
@@ -152,6 +135,7 @@ body {
     font-style: normal;
     display: block;
     margin: 10% auto;
+    border: #1a1a1a solid 3px;
 }
 
 .category-desktop {
@@ -160,15 +144,23 @@ body {
 
 /*-------------------------------TABLET----------------------------------*/
 @media only screen and (min-width: 481px) {
+    #home-page {
+        min-height: 100vh;
+    }
+
     .start-btn {
-        padding: 2% 8%;
-        font-size: 2.5rem;
-        border: #1a1a1a solid 5px;
+        padding: 1% 6%;
+        margin: 0 auto;
+        font-size: 1.5rem;
     }
 
     .start-btn:hover {
         color: #fff;
         background-color: #1a1a1a;
+    }
+
+    #difficulty-level-page {
+        min-height: 100vh;
     }
 
     #difficulty-level-page h1 {
