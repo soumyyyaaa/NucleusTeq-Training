@@ -252,7 +252,7 @@ body {
     border-color: #d3c9a2;
 }
 
-#questions {
+#quiz-page {
     display: none;
     background-color: #000;
     height: 100vh;

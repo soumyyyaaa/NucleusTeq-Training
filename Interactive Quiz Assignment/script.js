@@ -31,7 +31,7 @@ function difficultyLevelClick() {
 
 function categoryClick() {
     document.getElementById("category-page").style.display = "none";
-    document.getElementById("questions").style.display = "block";
+    document.getElementById("quiz-page").style.display = "block";
 }
 
 let questionIndex = 0;
