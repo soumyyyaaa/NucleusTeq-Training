@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Quiz</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="Images/favicon.ico" />
+        <link
+            rel="icon"
+            href="/Interactive Quiz Assignment/Images/favicon.ico"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
             rel="stylesheet"
@@ -18,7 +21,10 @@
     <body>
         <div id="home-page">
             <div class="center">
-                <img src="Images/logo1.gif" class="quiz-logo" />
+                <img
+                    src="/Interactive Quiz Assignment/Images/logo1.gif"
+                    class="quiz-logo"
+                />
                 <button onclick="startButtonCLick()" class="start-btn">
                     START
                 </button>
@@ -29,21 +35,21 @@
                 <h1>DIFFICULTY LEVEL</h1>
                 <div
                     class="difficulty-btn easy"
-                    value="easy"
+                    value="1"
                     onclick="difficultyLevelClick()"
                 >
                     <i class="fa-solid fa-circle bullet"></i> Low
                 </div>
                 <div
                     class="difficulty-btn medium"
-                    value="medium"
+                    value="2"
                     onclick="difficultyLevelClick()"
                 >
                     <i class="fa-solid fa-circle bullet"></i> Medium
                 </div>
                 <div
                     class="difficulty-btn hard"
-                    value="hard"
+                    value="3"
                     onclick="difficultyLevelClick()"
                 >
                     <i class="fa-solid fa-circle bullet"></i> High
@@ -53,101 +59,83 @@
         <div id="category-page">
             <h1>CATEGORY</h1>
             <div class="category-desktop">
-                <div class="category-card" onclick="categoryClick()" value="9">
+                <div class="category-card" onclick="categoryClick()" value="1">
                     <div class="category-card-icons gk">
                         <i class="fa-solid fa-globe fa-3x icon"></i>
                     </div>
                     <p>GK</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="10">
+                <div class="category-card" onclick="categoryClick()" value="2">
                     <div class="category-card-icons books">
                         <i class="fa-solid fa-book fa-3x icon"></i>
                     </div>
                     <p>Books</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="11">
+                <div class="category-card" onclick="categoryClick()" value="3">
                     <div class="category-card-icons film">
                         <i class="fa-solid fa-video fa-3x icon"></i>
                     </div>
                     <p>Film</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="12">
+                <div class="category-card" onclick="categoryClick()" value="4">
                     <div class="category-card-icons music">
                         <i class="fa-solid fa-music fa-3x icon"></i>
                     </div>
                     <p>Music</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="17">
+                <div class="category-card" onclick="categoryClick()" value="5">
                     <div class="category-card-icons nature">
                         <i class="fa-solid fa-tree fa-3x icon"></i>
                     </div>
                     <p>Nature</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="18">
-                    <div class="category-card-icons computers">
-                        <i class="fa-solid fa-computer fa-3x icon"></i>
-                    </div>
-                    <p>Computers</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="19">
-                    <div class="category-card-icons maths">
-                        <i class="fa-solid fa-calculator fa-3x icon"></i>
-                    </div>
-                    <p>Maths</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="20">
-                    <div class="category-card-icons mythology">
-                        <i class="fa-brands fa-pied-piper-alt fa-3x icon"></i>
-                    </div>
-                    <p>Mythology</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="21">
-                    <div class="category-card-icons sports">
-                        <i class="fa-solid fa-volleyball fa-3x icon"></i>
-                    </div>
-                    <p>Sports</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="24">
-                    <div class="category-card-icons politics">
-                        <i class="fa-solid fa-landmark-dome fa-3x icon"></i>
-                    </div>
-                    <p>Politics</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="26">
-                    <div class="category-card-icons celebrities">
-                        <i class="fa-solid fa-crown fa-3x icon"></i>
-                    </div>
-                    <p>Celebrities</p>
-                </div>
-                <div class="category-card" onclick="categoryClick()" value="27">
+                <div class="category-card" onclick="categoryClick()" value="6">
                     <div class="category-card-icons animals">
                         <i class="fa-solid fa-hippo fa-3x icon"></i>
                     </div>
                     <p>Animals</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="28">
+                <div class="category-card" onclick="categoryClick()" value="7">
                     <div class="category-card-icons vehicles">
                         <i class="fa-solid fa-motorcycle fa-3x icon"></i>
                     </div>
                     <p>Vehicles</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="31">
+                <div class="category-card" onclick="categoryClick()" value="8">
                     <div class="category-card-icons anime">
                         <i class="fa-solid fa-mountain-sun fa-3x icon"></i>
                     </div>
                     <p>Anime</p>
                 </div>
-                <div class="category-card" onclick="categoryClick()" value="32">
-                    <div class="category-card-icons cartoon">
-                        <i class="fa-brands fa-octopus-deploy fa-3x icon"></i>
+                <div class="category-card" onclick="categoryClick()" value="9">
+                    <div class="category-card-icons celebrities">
+                        <i class="fa-solid fa-crown fa-3x icon"></i>
                     </div>
-                    <p>Geography</p>
+                    <p>Celebrities</p>
+                </div>
+                <div class="category-card" onclick="categoryClick()" value="10">
+                    <div class="category-card-icons sports">
+                        <i class="fa-solid fa-volleyball fa-3x icon"></i>
+                    </div>
+                    <p>Sports</p>
                 </div>
             </div>
         </div>
         <div id="quiz-page">
-            <h2 class="question"></h2>
-            <div class="answers"></div>
+            <div class="display-page">
+                <div id="timer">15</div>
+                <p id="question"></p>
+                <button class="option" id="o1" value="0"></button>
+                <button class="option" id="o2" value="1"></button>
+                <button class="option" value="2" id="o3"></button>
+                <button class="option" value="3" id="o4"></button>
+                <button id="next_button">Next</button>
+            </div>
+        </div>
+        <div id="score-page">
+            <h2 style="margin: 0">Congratulatios!! You have scored</h2>
+            <div id="score-display"></div>
+            <button id="restart">Restart</button>
         </div>
         <script src="script.js"></script>
         <script
