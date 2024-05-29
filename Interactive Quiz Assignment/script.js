@@ -169,10 +169,13 @@ function resetButtonStyles() {
 }
 
 function displayScore() {
-    document.getElementById("quiz-page").style.display = "none";
-    document.getElementById("score-page").style.display = "block";
+    const score_page = document.getElementById("score-page")
     const score_display = document.getElementById("score-display");
+    const score_message = document.getElementById("score-message")
+    document.getElementById("quiz-page").style.display = "none";
+    score_page.style.display = "block";
     let no_of_ques;
+
     if (selected_difficulty == 1) {
         no_of_ques = 10;
     } else if (selected_difficulty == 2) {
@@ -180,9 +183,19 @@ function displayScore() {
     } else if (selected_difficulty == 3) {
         no_of_ques = 25;
     }
+    
+    if ((score / no_of_ques) * 100 >= 60) {
+        score_message.innerHTML = "Congratulations!! You have scored"
+        score_page.style.backgroundImage = "url('./Images/confetti.png')";
+        
+    } else {
+        score_message.innerHTML = "Better Luck Next Time.."
+        score_page.style.backgroundImage = "url('./Images/sad.jpg')";
+    }
+    
     let html_content = `<h2>${score} / ${no_of_ques}</h2>`;
     score_display.innerHTML = html_content;
-
+    
     // Optionally, show a restart button
     const restartButton = document.getElementById("restart");
     restartButton.addEventListener("click", () => {

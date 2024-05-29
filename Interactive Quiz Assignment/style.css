@@ -354,7 +354,7 @@ body {
 
 #score-page {
     display: none;
-    background-image: url("./Images/confetti.png");
+    /* background-image: url("./Images/confetti.png"); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
