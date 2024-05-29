@@ -176,7 +176,7 @@ function displayScore() {
     } else if (selected_difficulty == 3) {
         no_of_ques = 25;
     }
-    let html_content = `<h1>${score} / ${no_of_ques}</h1>`;
+    let html_content = `<h2>${score} / ${no_of_ques}</h2>`;
     score_display.innerHTML = html_content;
 
     // Optionally, show a restart button

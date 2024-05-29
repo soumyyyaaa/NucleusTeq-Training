@@ -115,7 +115,7 @@ body {
     text-align: center;
     background-color: #e1f0da;
     min-height: 100vh;
-    padding: 5% 0%;
+    padding: 7% 0 0 0;
 }
 
 #category-page h1 {
@@ -130,8 +130,7 @@ body {
     grid-template-columns: auto auto;
     text-align: center;
     justify-content: center;
-    grid-gap: 2% 10%;
-    padding-bottom: 55%;
+    grid-gap: 4% 10%;
 }
 
 .category-card {
@@ -253,12 +252,8 @@ body {
 }
 
 #quiz-page {
-    background: linear-gradient(
-        90deg,
-        hsla(270, 94%, 25%, 1) 0%,
-        hsla(158, 94%, 49%, 1) 100%
-    );
-
+    background: linear-gradient(90deg, hsla(212, 13%, 41%, 1) 0%, 
+                hsla(3, 100%, 73%, 1) 100%);
     display: none;
     height: 100vh;
     color: #fff;
@@ -266,7 +261,7 @@ body {
 
 .display-page {
     animation: fadeInTable 3s ease forwards;
-    padding: 7% 30%;
+    padding: 50% 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -344,32 +339,62 @@ body {
 }
 
 #next_button {
-    margin-top: 5%;
+    margin-top: 10%;
     padding: 2%;
     width: 30%;
     font-family: "Roboto Slab", serif;
     font-size: 1.1rem;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     cursor: pointer;
 }
 
 #next_button:hover {
-    border: 1px solid #000;
+    border: 3px solid #000;
 }
 
 #score-page {
     display: none;
+    background-image: url("./Images/confetti.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#score-page h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px #00000044;
+    color: #fff;
 }
 
 #score-display {
-    width: 150px; /* Adjust the width and height to change the size of the circle */
-    height: 150px;
-    background-color: #3498db; /* Change the background color as needed */
-    border-radius: 50%; /* This creates the circular shape */
+    margin: 8% auto 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #e4d287;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1rem;
+}
+
+#restart {
+    margin-top: 4%;
+    padding: 2% 8%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-style: normal;
+    border: #fff solid 3px;
+    display: block;
+    font-family: "Roboto Slab", serif;
+    margin: 10% auto 0 auto;
+
 }
 
 /*-------------------------------TABLET----------------------------------*/
@@ -428,12 +453,38 @@ body {
     .category-card p {
         font-size: 1.2rem;
     }
+
+    #score-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-page {
+        padding: 36% 20%;
+    }
+
+    #score-display {
+        width: 150px;
+        height: 150px;
+        font-size: 1.2rem;
+    }
+
+    #restart {
+        padding: 1% 6%;
+        margin-top: 10%;
+        font-size: 1.5rem;
+    }
+
+    #restart:hover {
+        color: #fff;
+        background-color: #1a1a1a;
+        border: 3px solid #fff;
+    }
 }
 
 /*--------------------------------DESKTOP---------------------------------*/
 @media only screen and (min-width: 1024px) {
     #difficulty-level-page h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .difficulty-btn {
@@ -454,4 +505,9 @@ body {
         grid-row-gap: 15%;
         padding-bottom: 14%;
     }
+
+    .display-page {
+        padding: 8% 30%;
+    }
+
 }
