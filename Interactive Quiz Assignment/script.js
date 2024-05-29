@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             onclick_value = this.getAttribute("value");
             checkAnswer(this);
+            enableNextButton();
         });
     });
 
@@ -128,6 +129,9 @@ function displayQuestion(index) {
     // Reset styles for buttons
     resetButtonStyles();
 
+    // Disable the Next button initially
+    disableNextButton();
+
     // Start the timer for the current question
     startTimer();
 }
@@ -196,6 +200,8 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(timer);
             highlightCorrectAnswer();
+            disableOptionButtons();
+            enableNextButton();
         }
     }, 1000);
 }
@@ -206,4 +212,16 @@ function disableOptionButtons() {
         // Disable the buttons
         button.disabled = true;
     });
+}
+
+function disableNextButton() {
+    const next_button = document.getElementById("next_button");
+    next_button.disabled = true;
+    next_button.style.opacity = "0.5";
+}
+
+function enableNextButton() {
+    const next_button = document.getElementById("next_button");
+    next_button.disabled = false;
+    next_button.style.opacity = "1";
 }
