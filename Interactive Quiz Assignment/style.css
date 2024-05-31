@@ -261,7 +261,7 @@ body {
 
 .display-page {
     animation: fadeInTable 3s ease forwards;
-    padding: 50% 8%;
+    padding: 40% 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -282,22 +282,22 @@ body {
     height: 50px; /* Half of the width to make a half-circle */
     border-radius: 50px 50px 0 0; /* 50% of the width to make a half-circle */
     overflow: hidden;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-bottom: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: "Roboto Slab", serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 #question {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: "Roboto Slab", serif;
     font-weight: 500;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     margin: 0;
     padding: 3% 4%;
     width: 91%;
@@ -307,11 +307,11 @@ body {
 .option {
     padding: 3% 4%;
     font-weight: 500;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     display: block;
     width: 100%;
     font-family: "Roboto Slab", serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     background: none;
     color: #fff;
     cursor: pointer;
@@ -354,7 +354,6 @@ body {
 
 #score-page {
     display: none;
-    /* background-image: url("./Images/confetti.png"); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -364,6 +363,7 @@ body {
 
 #score-page h1 {
     font-size: 2rem;
+    font-family: "Roboto Slab", serif;
     text-shadow: 1px 1px 1px #00000044;
     color: #fff;
 }
