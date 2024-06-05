@@ -23,6 +23,7 @@ class Questions(db.Model):
 class Category(db.Model):
     category_id = db.Column(db.Integer, primary_key=True)
     category_name = db.Column(db.String(200), unique=True, nullable=False)
+    icon_html = db.Column(db.String(1000), nullable=False)
 
 
 @app.route("/")
@@ -32,9 +33,10 @@ def we():
 @app.route("/insert/category", methods=["POST"])
 def insert_category():
     c_id = request.form.get('category_id')
-    c_name = request.form.get('category_name').lower()
+    c_name = request.form.get('category_name')
+    c_icon = request.form.get('icon_html')
 
-    new_cat = Category(category_id = c_id, category_name = c_name)
+    new_cat = Category(category_id = c_id, category_name = c_name, icon_html = c_icon)
     
     try:
         db.session.add(new_cat)
@@ -66,6 +68,12 @@ def insert_question():
         return jsonify({'message': 'Error creating question'}), 500
     finally:
         db.session.close()
+
+@app.route("/category/display", methods=['GET'])
+def get_categories():
+    categories = Category.query.all()
+    categories_list = [{"id": category.category_id, "name": category.category_name, "icon": category.icon_html} for category in categories]
+    return jsonify(categories_list)
 
 @app.route("/questions/<no_of_questions>/<category_id>", methods=["GET"])
 def question_route(no_of_questions, category_id):

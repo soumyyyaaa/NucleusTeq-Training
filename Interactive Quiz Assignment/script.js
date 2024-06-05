@@ -23,13 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //CATEGORY SELECTION
-    const category_buttons = document.querySelectorAll(".category-card");
-    category_buttons.forEach((button) => {
-        button.addEventListener("mousedown", function () {
-            selected_category = this.getAttribute("value");
-            fetchData();
-        });
-    });
+    fetchCategory()
 
     //OPTION SELECTION
     const option_buttons = document.querySelectorAll(".option");
@@ -66,7 +60,45 @@ function categoryClick() {
     document.getElementById("quiz-page").style.display = "block";
 }
 
+function fetchCategory() {
+    let api = "http://127.0.0.1:5000/category/display";
+    fetch(api)
+        .then((response) => response.json())
+        .then((data) => {
+            const categoryDesktop = document.getElementById('category-desktop');
+            data.forEach(category => {
+                const categoryCard = document.createElement('div');
+                categoryCard.className = 'category-card';
+                categoryCard.setAttribute('value', category.id); 
+                categoryCard.onclick = function() {
+                    selected_category = category.id;
+                    if (selected_difficulty) {
+                        fetchData();
+                    }
+                    categoryClick();
+                };
+
+                const categoryCardIcons = document.createElement('div');
+                const categoryNameClass = category.name.toLowerCase();
+                categoryCardIcons.className = `category-card-icons ${categoryNameClass}`;
+
+                categoryCardIcons.innerHTML = category.icon;
+
+                const categoryName = document.createElement('p');
+                categoryName.textContent = category.name;
+
+                categoryCard.appendChild(categoryCardIcons);
+                categoryCard.appendChild(categoryName);
+                categoryDesktop.appendChild(categoryCard);
+            });
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+}
+
 function fetchData() {
+    console.log(selected_category, selected_difficulty)
     if (!selected_difficulty || !selected_category) {
         console.error("Both difficulty and category are required");
         return;
@@ -78,6 +110,7 @@ function fetchData() {
     } else if (selected_difficulty == 3) {
         api = `http://127.0.0.1:5000/questions/25/${selected_category}`;
     }
+    console.log(api)
 
     fetch(api)
         .then((response) => response.json())
@@ -238,3 +271,4 @@ function enableNextButton() {
     next_button.disabled = false;
     next_button.style.opacity = "1";
 }
+

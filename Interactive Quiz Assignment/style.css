@@ -125,12 +125,12 @@ body {
     margin-bottom: 10%;
 }
 
-.category-desktop {
+#category-desktop {
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
     justify-content: center;
-    grid-gap: 4% 10%;
+    grid-gap: 4% 8%;
 }
 
 .category-card {
@@ -159,6 +159,9 @@ body {
 .category-card-icons {
     border-radius: 5% 5% 0 0;
     border: 1px solid;
+    background-color: #f39893;
+    color: #bf7874;
+    border-color: #f39893;
 }
 
 .gk {
@@ -191,37 +194,13 @@ body {
     border-color: #abd194;
 }
 
-.computers {
-    background-color: #b88cbf;
-    color: #91699e;
-    border-color: #b88cbf;
-}
-
-.maths {
-    background-color: #f1c85e;
-    color: #c9a74d;
-    border-color: #f1c85e;
-}
-
-.mythology {
-    background-color: #84a1c1;
-    color: #667e96;
-    border-color: #84a1c1;
-}
-
 .sports {
     background-color: #21898c;
     color: #17666a;
     border-color: #21898c;
 }
 
-.politics {
-    background-color: #3079ac;
-    color: #235a80;
-    border-color: #3079ac;
-}
-
-.celebrities {
+.celebrity {
     background-color: #7c87a5;
     color: #575f73;
     border-color: #7c87a5;
@@ -245,11 +224,6 @@ body {
     border-color: #a2a2a6;
 }
 
-.cartoon {
-    background-color: #d3c9a2;
-    color: #a49c7e;
-    border-color: #d3c9a2;
-}
 
 #quiz-page {
     background: linear-gradient(90deg, hsla(212, 13%, 41%, 1) 0%, 
@@ -444,7 +418,7 @@ body {
         border-radius: 5%;
     }
 
-    .category-desktop {
+    #category-desktop {
         grid-template-columns: auto auto auto;
         grid-gap: 7% 10%;
         padding-bottom: 35%;
@@ -500,7 +474,7 @@ body {
         padding: 0 0 5% 0;
     }
 
-    .category-desktop {
+    #category-desktop {
         grid-template-columns: auto auto auto auto auto;
         grid-row-gap: 15%;
         padding-bottom: 14%;
