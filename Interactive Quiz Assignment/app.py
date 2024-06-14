@@ -26,10 +26,10 @@ class Category(db.Model):
     icon_html = db.Column(db.String(1000), nullable=False)
 
 
-@app.route("/")
+""" @app.route("/")
 def we():
     return "hello world"
-
+ """
 @app.route("/insert/category", methods=["POST"])
 def insert_category():
     c_id = request.form.get('category_id')
@@ -87,13 +87,13 @@ def question_route(no_of_questions, category_id):
         questions_list = []
         for question in questions:
             question_dict = {
-                "question_id": question.question_id,
+                # "question_id": question.question_id,
                 "question": question.question,
                 "correct_answer": question.correct_answer,
                 "incorrect_answer1": question.incorrect_answer1,
                 "incorrect_answer2": question.incorrect_answer2,
                 "incorrect_answer3": question.incorrect_answer3,
-                "category_id": question.category_id,
+                # "category_id": question.category_id,
             }
             questions_list.append(question_dict)
 
