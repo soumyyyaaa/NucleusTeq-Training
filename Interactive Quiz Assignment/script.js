@@ -60,45 +60,111 @@ function categoryClick() {
     document.getElementById("quiz-page").style.display = "block";
 }
 
-function fetchCategory() {
+// function fetchCategory() {
+//     let api = "http://127.0.0.1:5000/category/display";
+//     fetch(api)
+//         .then((response) => response.json())
+//         .then((data) => {
+//             const categoryDesktop = document.getElementById('category-desktop');
+//             data.forEach(category => {
+//                 const categoryCard = document.createElement('div');
+//                 categoryCard.className = 'category-card';
+//                 categoryCard.setAttribute('value', category.id); 
+//                 categoryCard.onclick = function() {
+//                     selected_category = category.id;
+//                     if (selected_difficulty) {
+//                         fetchData();
+//                     }
+//                     categoryClick();
+//                 };
+
+//                 const categoryCardIcons = document.createElement('div');
+//                 const categoryNameClass = category.name.toLowerCase();
+//                 categoryCardIcons.className = `category-card-icons ${categoryNameClass}`;
+
+//                 categoryCardIcons.innerHTML = category.icon;
+
+//                 const categoryName = document.createElement('p');
+//                 categoryName.textContent = category.name;
+
+//                 categoryCard.appendChild(categoryCardIcons);
+//                 categoryCard.appendChild(categoryName);
+//                 categoryDesktop.appendChild(categoryCard);
+//             });
+//         })
+//         .catch((error) => {
+//             console.error("Error:", error);
+//         });
+// }
+
+async function fetchCategory() {
     let api = "http://127.0.0.1:5000/category/display";
-    fetch(api)
-        .then((response) => response.json())
-        .then((data) => {
-            const categoryDesktop = document.getElementById('category-desktop');
-            data.forEach(category => {
-                const categoryCard = document.createElement('div');
-                categoryCard.className = 'category-card';
-                categoryCard.setAttribute('value', category.id); 
-                categoryCard.onclick = function() {
-                    selected_category = category.id;
-                    if (selected_difficulty) {
-                        fetchData();
-                    }
-                    categoryClick();
-                };
+    try {
+        let response = await fetch(api);
+        let data = await response.json();
 
-                const categoryCardIcons = document.createElement('div');
-                const categoryNameClass = category.name.toLowerCase();
-                categoryCardIcons.className = `category-card-icons ${categoryNameClass}`;
+        const categoryDesktop = document.getElementById('category-desktop');
+        data.forEach(category => {
+            const categoryCard = document.createElement('div');
+            categoryCard.className = 'category-card';
+            categoryCard.setAttribute('value', category.id); 
+            categoryCard.onclick = function() {
+                selected_category = category.id;
+                if (selected_difficulty) {
+                    fetchData();
+                }
+                categoryClick();
+            };
 
-                categoryCardIcons.innerHTML = category.icon;
+            const categoryCardIcons = document.createElement('div');
+            const categoryNameClass = category.name.toLowerCase();
+            categoryCardIcons.className = `category-card-icons ${categoryNameClass}`;
 
-                const categoryName = document.createElement('p');
-                categoryName.textContent = category.name;
+            categoryCardIcons.innerHTML = category.icon;
 
-                categoryCard.appendChild(categoryCardIcons);
-                categoryCard.appendChild(categoryName);
-                categoryDesktop.appendChild(categoryCard);
-            });
-        })
-        .catch((error) => {
-            console.error("Error:", error);
+            const categoryName = document.createElement('p');
+            categoryName.textContent = category.name;
+
+            categoryCard.appendChild(categoryCardIcons);
+            categoryCard.appendChild(categoryName);
+            categoryDesktop.appendChild(categoryCard);
         });
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 
-function fetchData() {
-    console.log(selected_category, selected_difficulty)
+// function fetchData() {
+//     console.log(selected_category, selected_difficulty)
+//     if (!selected_difficulty || !selected_category) {
+//         console.error("Both difficulty and category are required");
+//         return;
+//     }
+
+//     let api = `http://127.0.0.1:5000/questions/10/${selected_category}`;
+//     if (selected_difficulty == 2) {
+//         api = `http://127.0.0.1:5000/questions/15/${selected_category}`;
+//     } else if (selected_difficulty == 3) {
+//         api = `http://127.0.0.1:5000/questions/25/${selected_category}`;
+//     }
+//     console.log(api)
+
+//     fetch(api)
+//         .then((response) => response.json())
+//         .then((data) => {
+//             // Store the fetched questions
+//             questions = data.questions;
+
+//             currentQuestionIndex = 0;
+//             displayQuestion(currentQuestionIndex);
+//         })
+//         .catch((error) => {
+//             console.error("Error:", error);
+//         });
+// }
+
+async function fetchData() {
+    console.log(selected_category, selected_difficulty);
     if (!selected_difficulty || !selected_category) {
         console.error("Both difficulty and category are required");
         return;
@@ -110,20 +176,20 @@ function fetchData() {
     } else if (selected_difficulty == 3) {
         api = `http://127.0.0.1:5000/questions/25/${selected_category}`;
     }
-    console.log(api)
+    console.log(api);
 
-    fetch(api)
-        .then((response) => response.json())
-        .then((data) => {
-            // Store the fetched questions
-            questions = data.questions;
+    try {
+        let response = await fetch(api);
+        let data = await response.json();
 
-            currentQuestionIndex = 0;
-            displayQuestion(currentQuestionIndex);
-        })
-        .catch((error) => {
-            console.error("Error:", error);
-        });
+        // Store the fetched questions
+        questions = data.questions;
+
+        currentQuestionIndex = 0;
+        displayQuestion(currentQuestionIndex);
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 
 function displayQuestion(index) {
