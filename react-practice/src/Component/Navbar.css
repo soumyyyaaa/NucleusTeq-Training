@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+}
+
+header {
+  color: #fff;
+  background-color: #000;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header .inner-wrap {
+  max-width: 1280px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1em;
+  overflow: visible;
+}
+header .brand {
+  display: flex;
+}
+header .brand h1 {
+  align-self: center;
+  font-size: 2em;
+  display: inline-block;
+  padding: 0 0 0 16px;
+}
+
+header nav {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  transition: all 400ms;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
